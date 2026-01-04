@@ -3,267 +3,91 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Manal S - Portfolio | BBA Finance & Management</title>
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&display=swap');
-        
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        
-        body {
-            font-family: 'Orbitron', monospace;
-            background: radial-gradient(ellipse at bottom, #1B2735 0%, #090A0F 100%);
-            overflow-x: hidden;
-            height: 100vh;
-            color: #fff;
-        }
-        
-        /* Stars */
-        .stars {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            pointer-events: none;
-            z-index: 1;
-        }
-        
-        .star {
-            position: absolute;
-            background: #fff;
-            border-radius: 50%;
-            animation: twinkle 2s infinite alternate;
-        }
-        
-        @keyframes twinkle {
-            0% { opacity: 0.3; transform: scale(1); }
-            100% { opacity: 1; transform: scale(1.2); }
-        }
-        
-        /* Solar System Container */
-        .solar-system {
-            position: fixed;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            width: 400px;
-            height: 400px;
-            z-index: 2;
-        }
-        
-        .sun {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            width: 60px;
-            height: 60px;
-            background: radial-gradient(circle, #FFD700, #FFA500, #FF4500);
-            border-radius: 50%;
-            transform: translate(-50%, -50%);
-            box-shadow: 0 0 50px #FFD700, 0 0 100px #FF4500;
-            z-index: 5;
-        }
-        
-        .orbit {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            border: 1px solid rgba(255,255,255,0.1);
-            border-radius: 50%;
-            transform: translate(-50%, -50%);
-        }
-        
-        .orbit1 { width: 120px; height: 120px; animation: rotate 20s linear infinite reverse; }
-        .orbit2 { width: 200px; height: 200px; animation: rotate 30s linear infinite; }
-        .orbit3 { width: 280px; height: 280px; animation: rotate 40s linear infinite reverse; }
-        .orbit4 { width: 360px; height: 360px; animation: rotate 50s linear infinite; }
-        
-        @keyframes rotate {
-            0% { transform: translate(-50%, -50%) rotate(0deg); }
-            100% { transform: translate(-50%, -50%) rotate(360deg); }
-        }
-        
-        .planet {
-            position: absolute;
-            top: 0;
-            left: 50%;
-            width: 20px;
-            height: 20px;
-            border-radius: 50%;
-            transform: translate(-50%, -50%);
-        }
-        
-        .mercury { background: #8C7853; width: 12px; height: 12px; }
-        .venus { background: #FFC649; width: 16px; height: 16px; box-shadow: 0 0 10px #FFD700; }
-        .earth { background: radial-gradient(circle at 30% 30%, #00BFFF, #228B22); width: 18px; height: 18px; }
-        .mars { background: radial-gradient(circle, #CD5C5C, #8B4513); }
-        
-        /* Content Overlay */
-        .content {
-            position: relative;
-            z-index: 10;
-            padding: 20px;
-            max-width: 800px;
-            margin: 0 auto;
-            text-align: center;
-        }
-        
-        .hero h1 {
-            font-size: 3.5em;
-            font-weight: 900;
-            margin-bottom: 10px;
-            text-shadow: 0 0 20px #00FFFF;
-            animation: glow 2s ease-in-out infinite alternate;
-        }
-        
-        @keyframes glow {
-            0% { text-shadow: 0 0 20px #00FFFF, 0 0 30px #00FFFF; }
-            100% { text-shadow: 0 0 30px #00FFFF, 0 0 40px #00FFFF, 0 0 50px #00FFFF; }
-        }
-        
-        .hero p {
-            font-size: 1.5em;
-            margin-bottom: 20px;
-            opacity: 0.9;
-        }
-        
-        .section {
-            background: rgba(0,0,0,0.7);
-            margin: 40px 0;
-            padding: 30px;
-            border-radius: 20px;
-            backdrop-filter: blur(10px);
-            border: 1px solid rgba(255,255,255,0.1);
-        }
-        
-        .skills ul {
-            list-style: none;
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 20px;
-        }
-        
-        .skills li {
-            background: linear-gradient(45deg, #00FFFF, #FF00FF);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            font-weight: 700;
-        }
-        
-        .links {
-            margin-top: 30px;
-        }
-        
-        .links a {
-            display: inline-block;
-            margin: 10px;
-            padding: 15px 30px;
-            background: linear-gradient(45deg, #00FFFF, #FF00FF);
-            color: #000;
-            text-decoration: none;
-            border-radius: 50px;
-            font-weight: 700;
-            transition: transform 0.3s;
-        }
-        
-        .links a:hover {
-            transform: scale(1.1);
-            box-shadow: 0 0 30px #00FFFF;
-        }
-        
-        @media (max-width: 768px) {
-            .solar-system { width: 300px; height: 300px; }
-            .orbit4 { width: 280px; height: 280px; }
-            .hero h1 { font-size: 2.5em; }
-        }
-    </style>
+    <title>Manal S - BBA Finance & Management Professional</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <!-- Stars Background -->
-    <div class="stars" id="stars"></div>
-    
-    <!-- Solar System -->
-    <div class="solar-system">
-        <div class="sun"></div>
-        <div class="orbit orbit1">
-            <div class="planet mercury"></div>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">Manal S</div>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#objective">Objective</a></li>
+                <li><a href="#education">Education</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#experience">Experience</a></li>
+            </ul>
         </div>
-        <div class="orbit orbit2">
-            <div class="planet venus"></div>
-        </div>
-        <div class="orbit orbit3">
-            <div class="planet earth"></div>
-        </div>
-        <div class="orbit orbit4">
-            <div class="planet mars"></div>
-        </div>
-    </div>
-    
-    <!-- Content -->
-    <div class="content">
-        <section class="hero">
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
             <h1>Manal S</h1>
-            <p>BBA - Finance & Management | Aspiring Professional</p>
-            <div class="links">
-                <a href="https://www.linkedin.com/in/manal-s" target="_blank">LinkedIn</a>
-                <a href="mailto:manalkothari@gmail.com">Email</a>
-                <a href="tel:+919113572203">+91 9113572203</a>
+            <p class="subtitle">BBA - Finance & Management | Aspiring Finance Professional</p>
+            <div class="cta-buttons">
+                <a href="https://www.linkedin.com/in/manal-s" class="btn btn-primary" target="_blank">
+                    LinkedIn Profile
+                </a>
+                <a href="mailto:manalkothari@gmail.com" class="btn btn-secondary">
+                    Contact Me
+                </a>
+            </div>
+            <div style="margin-top: 2rem; color: var(--text-light);">
+                <p>+91 9113572203 | Bengaluru, Karnataka</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <div class="content">
+        <!-- Career Objective -->
+        <section id="objective" class="section">
+            <h2>Career Objective</h2>
+            <p>Enthusiastic BBA graduate seeking entry-level positions in finance, marketing, and management. Excellent communicator with keen attention to detail, multitasking abilities, and problem-solving skills. Committed to delivering results through hard work, organizational skills, and adaptability in dynamic environments.</p>
+        </section>
+
+        <!-- Academic Record -->
+        <section id="education" class="section">
+            <h2>Academic Record</h2>
+            <div class="stats">
+                <div class="stat-item">
+                    <div class="stat-number">7.7 CGPA</div>
+                    <div class="stat-label">BBA - Surana College Autonomous</div>
+                    <div class="stat-label">2022-2025 (Pursuing)</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">84%</div>
+                    <div class="stat-label">PUC - Sri Devaraj Urs PU College</div>
+                    <div class="stat-label">2020-2022</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">67%</div>
+                    <div class="stat-label">SSLC - M.S.V Public School</div>
+                    <div class="stat-label">2020</div>
+                </div>
             </div>
         </section>
-        
-        <section class="section">
-            <h2 style="font-size: 2em; margin-bottom: 20px; color: #FFD700;">Career Objective</h2>
-            <p>Enthusiastic BBA student seeking entry-level positions in finance, marketing, and management. Strong communicator with attention to detail, multitasking, and problem-solving skills. Eager to contribute through hard work and organizational abilities.[file:1]</p>
-        </section>
-        
-        <section class="section">
-            <h2 style="font-size: 2em; margin-bottom: 20px; color: #00FFFF;">Academic Record</h2>
-            <ul style="text-align: left; list-style: none;">
-                <li>• BBA, Surana College Autonomous (7.7 CGPA, 2022-2025)</li>
-                <li>• PUC, Sri Devaraj Urs PU College (84%, 2020-2022)</li>
-                <li>• SSLC, M.S.V Public School (67%, 2020)</li>
-            </ul>
-        </section>
-        
-        <section class="section skills">
-            <h2 style="font-size: 2em; margin-bottom: 20px; color: #FF00FF;">Skills & Certifications</h2>
-            <ul>
-                <li>Communication & Soft Skills</li>
-                <li>Business Analytics (Imarticus Learning)</li>
-                <li>Digital Marketing</li>
-                <li>Working Capital Management</li>
-                <li>Artificial Intelligence</li>
-                <li>Global Employability Test</li>
-                <li>MS Office</li>
-            </ul>
-        </section>
-        
-        <section class="section">
-            <h2 style="font-size: 2em; margin-bottom: 20px; color: #00BFFF;">Experience & Roles</h2>
-            <ul style="text-align: left; list-style: none;">
-                <li>• Part-time Assistant, Family Business (Sales, Inventory, Customer Service)</li>
-                <li>• Treasurer, Rotaract Club of Surana College</li>
-                <li>• Coordinator, Club Projects & College Events (JMF)</li>
-            </ul>
-        </section>
-    </div>
-    
-    <script>
-        // Generate twinkling stars
-        const starsContainer = document.getElementById('stars');
-        for (let i = 0; i < 200; i++) {
-            const star = document.createElement('div');
-            star.className = 'star';
-            star.style.left = Math.random() * 100 + '%';
-            star.style.top = Math.random() * 100 + '%';
-            star.style.width = star.style.height = (Math.random() * 3 + 1) + 'px';
-            star.style.animationDelay = Math.random() * 2 + 's';
-            starsContainer.appendChild(star);
-        }
-    </script>
-</body>
-</html>
+
+        <!-- Skills & Certifications -->
+        <section id="skills" class="section">
+            <h2>Skills & Certifications</h2>
+            <ul class="skills-grid">
+                <li class="skill-item">
+                    <strong>Business Analytics</strong>
+                    Certified from Imarticus Learning
+                </li>
+                <li class="skill-item">
+                    <strong>Digital Marketing</strong>
+                    Certified Professional
+                </li>
+                <li class="skill-item">
+                    <strong>Working Capital Management</strong>
+                    Finance Certification
+                </li>
+                <li class="skill-item">
+                    <strong>Artificial Intelligence</strong>
+                    Technical Certification
+                </li>
+                <li class="s
